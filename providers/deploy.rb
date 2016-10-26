@@ -217,7 +217,7 @@ end
 # @return [void]
 def extract_artifact!
   recipe_eval do
-    case ::File.extname(cached_tar_path)
+    case cached_tar_path
     when /(tar|tgz|tar\.gz|tbz2|tbz|tar\.xz)$/
 
       taropts = [ '-x' ]
